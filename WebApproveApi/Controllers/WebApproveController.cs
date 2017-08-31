@@ -45,7 +45,7 @@ namespace WebApproveApi.Controllers
         }
 
         [HttpGet]
-        [Route("webApprove/getAllDocDetail")]
+        [Route("webApprove/getAllDocDetail/a")]
         public List<sp_DocDetailSelect_Result> getAllDocDetail()
         {
             WebApvService service = new WebApvService();

@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="WebApproveModelStoreContainer" CdmEntityContainer="WebApproveEntities">
+    <FunctionImportMapping FunctionImportName="sp_RegisterInsert" FunctionName="WebApproveModel.Store.sp_RegisterInsert">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="WebApproveModel.sp_RegisterInsert_Result">
+          <ScalarProperty Name="reg_ID" ColumnName="reg_ID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_RegisterSelect" FunctionName="WebApproveModel.Store.sp_RegisterSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="WebApproveModel.sp_RegisterSelect_Result">
+          <ScalarProperty Name="regId" ColumnName="regId" />
+          <ScalarProperty Name="Schema" ColumnName="Schema" />
+          <ScalarProperty Name="groupApprove" ColumnName="groupApprove" />
+          <ScalarProperty Name="schemaName" ColumnName="schemaName" />
+          <ScalarProperty Name="targetNameSpace" ColumnName="targetNameSpace" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_CheckUnApprove" FunctionName="WebApproveModel.Store.sp_CheckUnApprove" />
+    <FunctionImportMapping FunctionImportName="sp_DocDetailSelect" FunctionName="WebApproveModel.Store.sp_DocDetailSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="WebApproveModel.sp_DocDetailSelect_Result">
+          <ScalarProperty Name="docDetaiId" ColumnName="docDetaiId" />
+          <ScalarProperty Name="docType" ColumnName="docType" />
+          <ScalarProperty Name="dataRequest" ColumnName="dataRequest" />
+          <ScalarProperty Name="dateRequest" ColumnName="dateRequest" />
+          <ScalarProperty Name="empId" ColumnName="empId" />
+          <ScalarProperty Name="statusId" ColumnName="statusId" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_DocDetailInsert" FunctionName="WebApproveModel.Store.sp_DocDetailInsert" />
+    <EntitySetMapping Name="DocumentDetails">
+      <EntityTypeMapping TypeName="WebApproveModel.DocumentDetail">
+        <MappingFragment StoreEntitySet="DocumentDetail">
+          <ScalarProperty Name="docDetailId" ColumnName="docDetailId" />
+          <ScalarProperty Name="statusId" ColumnName="statusId" />
+          <ScalarProperty Name="empId" ColumnName="empId" />
+          <ScalarProperty Name="dateRequest" ColumnName="dateRequest" />
+          <ScalarProperty Name="dataRequest" ColumnName="dataRequest" />
+          <ScalarProperty Name="subjectName" ColumnName="subjectName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Registers">
+      <EntityTypeMapping TypeName="IsTypeOf(WebApproveModel.Register)">
+        <MappingFragment StoreEntitySet="Register">
+          <ScalarProperty Name="regId" ColumnName="regId" />
+          <ScalarProperty Name="schemaName" ColumnName="schemaName" />
+          <ScalarProperty Name="Schema" ColumnName="Schema" />
+          <ScalarProperty Name="targetNameSpace" ColumnName="targetNameSpace" />
+          <ScalarProperty Name="Transform" ColumnName="Transform" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_EmpPermissionInsert" FunctionName="WebApproveModel.Store.sp_EmpPermissionInsert" />
+  </EntityContainerMapping>
+</Mapping>
